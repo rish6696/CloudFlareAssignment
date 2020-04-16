@@ -69,7 +69,7 @@ async function handleRequest(request) {
     .on('a', new ElementHandler(constants))
     .transform(response);
   responseTosend = new Response(responseTosend.body, responseTosend);
-  responseTosend.headers.append('Set-Cookie', `${cookieName}=${9877}; path=/`)
+  responseTosend.headers.append('Set-Cookie', `${cookieName}=${idx+1}; path=/`)
   return responseTosend;
 
 }
